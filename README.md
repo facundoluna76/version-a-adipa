@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ADIPA — Versión A (Next.js)
 
-## Getting Started
+Landing page de catálogo de cursos para **ADIPA**, plataforma de educación continua especializada en psicología y salud mental.
 
-First, run the development server:
+## Stack
+
+| Tecnología    | Versión       |
+|--------------|---------------|
+| Next.js      | 16.2.4        |
+| React        | 19.x          |
+| TypeScript   | 5.x (strict)  |
+| Tailwind CSS | 4.x           |
+| Node.js      | 22.x          |
+
+## Instalación
+
+```bash
+# Instalar dependencias
+npm install
+```
+
+## Desarrollo local
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build de producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Estructura del proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+adipa-version-a/
+├── app/
+│   ├── globals.css        # Design tokens ADIPA + Tailwind v4
+│   ├── layout.tsx         # RootLayout — SEO, metadata, ThemeProvider
+│   └── page.tsx           # Página principal
+├── components/
+│   ├── Header/            # Header fijo con promo banner, dark mode toggle
+│   ├── Hero/              # Hero con gradiente púrpura y CTA
+│   ├── Courses/
+│   │   ├── CourseCard.tsx      # Card de curso (imagen, precio, rating, badge)
+│   │   ├── CourseGrid.tsx      # Grid con filtrado client-side
+│   │   └── CategoryFilter.tsx  # Pills de categoría con conteo
+│   ├── Contact/
+│   │   └── ContactForm.tsx     # Formulario validado + estado de éxito
+│   ├── Footer/                 # Footer con links y redes sociales
+│   ├── providers/
+│   │   └── ThemeProvider.tsx   # Dark mode con localStorage
+│   └── ui/
+│       ├── Badge.tsx      # Badges reutilizables
+│       └── Button.tsx     # Botón con variantes y loading state
+├── data/
+│   └── courses.ts         # 12 cursos ficticios en 5 categorías
+└── types/
+    └── index.ts           # Tipos TypeScript (Course, Category, FormErrors…)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Secciones implementadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Sección                  | Estado |
+|--------------------------|--------|
+| Promo banner dismissible | ✅     |
+| Header sticky + búsqueda | ✅     |
+| Hero con gradiente ADIPA | ✅     |
+| Stats bar (4 métricas)   | ✅     |
+| Grilla de cursos 3/2/1   | ✅     |
+| Filtros por categoría    | ✅     |
+| ¿Por qué ADIPA?          | ✅     |
+| Testimonios              | ✅     |
+| Formulario de contacto   | ✅     |
+| Footer con redes         | ✅     |
 
-## Deploy on Vercel
+## Bonus implementados
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ **Dark mode** — Toggle con persistencia en `localStorage`
+- ✅ **SEO básico** — Metadata, Open Graph, Twitter Cards, robots
+- ✅ **Accesibilidad** — HTML semántico, ARIA, navegación por teclado
+- ✅ **Responsive** — Mobile (375px), Tablet (768px), Desktop (1280px+)
+- ✅ **Animaciones** — Hover en cards, transiciones, scroll suave
+- ✅ **TypeScript strict** — `strict: true` habilitado
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Datos ficticios
+
+Definidos en `data/courses.ts`:
+
+- **12 cursos** en **5 categorías**: Psicología Clínica, Educación y Neurodesarrollo, Neurociencias, Psicología Organizacional, Psicología Jurídica y Forense
+- Imágenes desde Unsplash (optimizadas por Next.js `Image`)
+
+## Design Tokens ADIPA
+
+| Token            | Color     | Uso                      |
+|-----------------|-----------|--------------------------|
+| `adipa-purple`  | `#6C5CE7` | Color principal, CTAs    |
+| `adipa-cyan`    | `#22D3EE` | Acento, botón búsqueda   |
+| `adipa-orange`  | `#F59E0B` | Descuentos, estrellas    |
+| `adipa-red`     | `#EF4444` | Promo banner, alertas    |
+| `adipa-dark`    | `#0F0F1A` | Fondo dark mode          |
