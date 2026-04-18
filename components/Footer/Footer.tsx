@@ -61,8 +61,7 @@ function LinkedinIcon({ size = 16 }: { size?: number }) {
 function YoutubeIcon({ size = 16 }: { size?: number }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
-      <polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
     </svg>
   );
 }
@@ -135,7 +134,7 @@ export function Footer() {
                   key={name}
                   href={href}
                   aria-label={name}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-adipa-gray-200 text-adipa-gray-500 transition-all hover:bg-adipa-purple hover:text-white dark:bg-white/10 dark:text-adipa-gray-400"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-adipa-purple text-white transition-all hover:bg-adipa-cyan"
                 >
                   <Icon size={16} />
                 </a>

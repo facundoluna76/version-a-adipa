@@ -3,6 +3,7 @@ import { Hero } from '@/components/Hero/Hero';
 import { CourseGrid } from '@/components/Courses/CourseGrid';
 import { ContactForm } from '@/components/Contact/ContactForm';
 import { Footer } from '@/components/Footer/Footer';
+import { FadeIn } from '@/components/ui/FadeIn';
 import { STATS } from '@/data/courses';
 import {
   ShieldCheck,
@@ -41,18 +42,17 @@ export default function Home() {
         >
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {STATS.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center text-center"
-                >
-                  <span className="text-2xl font-black text-adipa-purple sm:text-3xl">
-                    {stat.value}
-                  </span>
-                  <span className="mt-1 text-xs text-adipa-gray-500 sm:text-sm">
-                    {stat.label}
-                  </span>
-                </div>
+              {STATS.map((stat, i) => (
+                <FadeIn key={stat.label} delay={i * 100}>
+                  <div className="flex flex-col items-center text-center">
+                    <span className="text-2xl font-black text-adipa-purple sm:text-3xl">
+                      {stat.value}
+                    </span>
+                    <span className="mt-1 text-xs text-adipa-gray-500 sm:text-sm">
+                      {stat.label}
+                    </span>
+                  </div>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function Home() {
           className="bg-white py-20 dark:bg-adipa-gray-900"
         >
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
+            <FadeIn className="mb-12 text-center">
               <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-adipa-purple">
                 ¿Por qué elegirnos?
               </p>
@@ -82,7 +82,7 @@ export default function Home() {
                 Más de 15.000 psicólogos y profesionales de la salud mental ya
                 eligieron ADIPA para potenciar su carrera.
               </p>
-            </div>
+            </FadeIn>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -106,19 +106,18 @@ export default function Home() {
                   title: 'Flexibilidad horaria',
                   desc: 'Clases en vivo grabadas disponibles 24/7. Aprende a tu ritmo sin perder contenido.',
                 },
-              ].map(({ Icon, title, desc }) => (
-                <div
-                  key={title}
-                  className="rounded-2xl border border-adipa-gray-200 bg-adipa-gray-50 p-6 transition-all hover:border-adipa-purple/30 hover:shadow-md dark:border-adipa-gray-700/60 dark:bg-adipa-gray-900/60"
-                >
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-adipa-purple/10">
-                    <Icon size={24} className="text-adipa-purple" aria-hidden="true" />
+              ].map(({ Icon, title, desc }, i) => (
+                <FadeIn key={title} delay={(i + 1) * 100}>
+                  <div className="rounded-2xl border border-adipa-gray-200 bg-adipa-gray-50 p-6 transition-all hover:border-adipa-purple/30 hover:shadow-md dark:border-adipa-gray-700/60 dark:bg-adipa-gray-900/60">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-adipa-purple/10">
+                      <Icon size={24} className="text-adipa-purple" aria-hidden="true" />
+                    </div>
+                    <h3 className="mb-2 font-bold text-adipa-dark dark:text-white">
+                      {title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-adipa-gray-500">{desc}</p>
                   </div>
-                  <h3 className="mb-2 font-bold text-adipa-dark dark:text-white">
-                    {title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-adipa-gray-500">{desc}</p>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -130,14 +129,14 @@ export default function Home() {
           className="bg-adipa-purple-50 py-20 dark:bg-adipa-gray-900/50"
         >
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 text-center">
+            <FadeIn className="mb-12 text-center">
               <h2
                 id="testimonials-heading"
                 className="text-2xl font-black text-adipa-dark dark:text-white sm:text-3xl"
               >
                 Lo que dicen nuestros estudiantes
               </h2>
-            </div>
+            </FadeIn>
 
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {[
@@ -165,9 +164,9 @@ export default function Home() {
                   rating: 5,
                   avatar: 'DF',
                 },
-              ].map(({ name, role, quote, rating, avatar }) => (
+              ].map(({ name, role, quote, rating, avatar }, i) => (
+                <FadeIn key={name} delay={(i + 1) * 100}>
                 <blockquote
-                  key={name}
                   className="rounded-2xl bg-white p-6 shadow-sm dark:bg-adipa-gray-900"
                 >
                   {/* Stars */}
@@ -198,6 +197,7 @@ export default function Home() {
                     </div>
                   </footer>
                 </blockquote>
+                </FadeIn>
               ))}
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function Home() {
           <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
               {/* Left: info */}
-              <div>
+              <FadeIn>
                 <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-adipa-purple">
                   Contacto
                 </p>
@@ -282,15 +282,17 @@ export default function Home() {
                     </p>
                   ))}
                 </div>
-              </div>
+              </FadeIn>
 
               {/* Right: form */}
+              <FadeIn delay={150}>
               <div className="rounded-2xl border border-adipa-gray-200 bg-adipa-gray-50 p-6 dark:border-adipa-gray-700/60 dark:bg-adipa-gray-900/40 sm:p-8">
                 <h3 className="mb-6 text-lg font-bold text-adipa-dark dark:text-white">
                   Envíanos un mensaje
                 </h3>
                 <ContactForm />
               </div>
+              </FadeIn>
             </div>
           </div>
         </section>

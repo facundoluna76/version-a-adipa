@@ -140,7 +140,7 @@ export function FilterSidebar({
                   aria-checked={isActive}
                   onClick={() => onChange({ category: cat.id })}
                   className={clsx(
-                    'flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors',
+                    'flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
                       ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
                       : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-adipa-gray-300 dark:hover:bg-adipa-gray-700/50',
@@ -214,7 +214,7 @@ export function FilterSidebar({
                   aria-checked={isActive}
                   onClick={() => onChange({ maxPrice: value })}
                   className={clsx(
-                    'flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition-colors',
+                    'flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
                       ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
                       : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-adipa-gray-300 dark:hover:bg-adipa-gray-700/50',

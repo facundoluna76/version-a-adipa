@@ -35,14 +35,14 @@ export function CategoryFilter({
             className={clsx(
               'flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium',
               'transition-all duration-200 ease-in-out',
-              'focus-visible:outline-2 focus-visible:outline-adipa-purple focus-visible:outline-offset-2',
+              'focus-visible:outline-2 focus-visible:outline-adipa-purple focus-visible:outline-offset-2 ',
               isActive
                 ? 'filter-pill-active'
                 : [
                     'border border-adipa-gray-200 bg-white text-adipa-gray-700',
                     'hover:border-adipa-purple hover:text-adipa-purple',
                     'dark:border-adipa-gray-700 dark:bg-adipa-gray-900/60 dark:text-adipa-gray-300',
-                    'dark:hover:border-adipa-purple dark:hover:text-adipa-purple',
+                    'dark:hover:border-adipa-purple dark:hover:text-adipa-purple cursor-pointer',
                   ],
             )}
           >

@@ -59,15 +59,14 @@ export function CourseCard({ course }: CourseCardProps) {
             {course.modality}
           </Badge>
           {course.isNew && <Badge variant="new">NUEVO</Badge>}
-          {course.isFeatured && !course.isNew && (
-            <Badge variant="featured">DESTACADO</Badge>
-          )}
         </div>
 
-        {/* Discount badge */}
-        <div className="absolute right-3 top-3">
-          <Badge variant="discount">-{course.discountPercentage}%</Badge>
-        </div>
+        {/* Featured / top-right badge */}
+        {course.isFeatured && !course.isNew && (
+          <div className="absolute right-3 top-3">
+            <Badge variant="featured">DESTACADO</Badge>
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -139,10 +138,11 @@ export function CourseCard({ course }: CourseCardProps) {
               {formatPrice(course.originalPrice)}
             </p>
             <p
-              className="text-lg font-black text-adipa-purple"
+              className="flex items-center gap-2 text-lg font-black text-adipa-purple"
               aria-label={`Precio con descuento: ${formatPrice(course.discountPrice)}`}
             >
               {formatPrice(course.discountPrice)}
+              <Badge variant="discount">-{course.discountPercentage}%</Badge>
             </p>
           </div>
           <Button

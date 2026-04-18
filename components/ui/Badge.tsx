@@ -9,9 +9,9 @@ interface BadgeProps {
 }
 
 const modalityStyles: Record<Modality, string> = {
-  'En Vivo':   'bg-adipa-purple/10 text-adipa-purple border border-adipa-purple/20',
-  'Online':    'bg-adipa-cyan/10 text-adipa-cyan-600 border border-adipa-cyan/20',
-  'Presencial':'bg-adipa-orange/10 text-adipa-orange-600 border border-adipa-orange/20',
+  'En Vivo':   'bg-white/90 text-adipa-purple backdrop-blur-sm border border-white/50',
+  'Online':    'bg-white/90 text-adipa-cyan-600 backdrop-blur-sm border border-white/50',
+  'Presencial':'bg-white/90 text-adipa-orange-600 backdrop-blur-sm border border-white/50',
 };
 
 const modalityDots: Record<Modality, string> = {
@@ -53,7 +53,7 @@ export function Badge({ children, variant = 'default', modality, className }: Ba
     return (
       <span
         className={clsx(
-          'rounded-full bg-adipa-cyan px-2.5 py-0.5 text-xs font-bold text-white',
+          'rounded-full bg-adipa-cyan px-2.5 py-1.5 text-xs font-bold text-white',
           className,
         )}
       >
@@ -66,7 +66,7 @@ export function Badge({ children, variant = 'default', modality, className }: Ba
     return (
       <span
         className={clsx(
-          'rounded-full bg-adipa-orange px-2.5 py-0.5 text-xs font-bold text-white',
+          'rounded-full bg-adipa-orange px-2.5 py-1.5 text-xs font-bold text-white',
           className,
         )}
       >
