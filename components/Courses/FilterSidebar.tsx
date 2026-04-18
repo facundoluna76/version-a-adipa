@@ -57,7 +57,7 @@ interface FilterSidebarProps {
 /* ─── Sub-components ─────────────────────────────────────────────────── */
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="mb-3 text-[11px] font-bold uppercase tracking-widest text-adipa-gray-500">
+    <h3 className="mb-3 text-[11px] font-bold uppercase tracking-widest text-adipa-gray-500 dark:text-white">
       {children}
     </h3>
   );
@@ -143,7 +143,7 @@ export function FilterSidebar({
                     'flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
                       ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
-                      : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-adipa-gray-300 dark:hover:bg-adipa-gray-700/50',
+                      : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-white dark:hover:bg-adipa-gray-700/50',
                   )}
                 >
                   <span className="text-left leading-snug">{cat.label}</span>
@@ -152,7 +152,7 @@ export function FilterSidebar({
                       'ml-2 flex-shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-bold',
                       isActive
                         ? 'bg-adipa-purple text-white'
-                        : 'bg-adipa-gray-200 text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-adipa-gray-400',
+                        : 'bg-adipa-gray-200 text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-white',
                     )}
                   >
                     {count}
@@ -184,11 +184,11 @@ export function FilterSidebar({
                     onChange={() => toggleModality(value)}
                     className="h-4 w-4 flex-shrink-0 rounded border-adipa-gray-300 accent-adipa-purple"
                   />
-                  <span className="flex flex-1 items-center gap-2 text-sm text-adipa-gray-700 dark:text-adipa-gray-300">
+                  <span className="flex flex-1 items-center gap-2 text-sm text-adipa-gray-700 dark:text-white">
                     <span aria-hidden="true">{icon}</span>
                     {label}
                   </span>
-                  <span className="rounded-full bg-adipa-gray-200 px-1.5 py-0.5 text-[10px] font-bold text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-adipa-gray-400">
+                  <span className="rounded-full bg-adipa-gray-200 px-1.5 py-0.5 text-[10px] font-bold text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-white">
                     {count}
                   </span>
                 </label>
@@ -217,7 +217,7 @@ export function FilterSidebar({
                     'flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
                       ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
-                      : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-adipa-gray-300 dark:hover:bg-adipa-gray-700/50',
+                      : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-white dark:hover:bg-adipa-gray-700/50',
                   )}
                 >
                   <span
@@ -259,7 +259,7 @@ export function FilterSidebar({
                     onChange={(e) => onChange({ [key]: e.target.checked })}
                     className="h-4 w-4 flex-shrink-0 rounded border-adipa-gray-300 accent-adipa-purple"
                   />
-                  <span className="flex items-center gap-2 text-sm text-adipa-gray-700 dark:text-adipa-gray-300">
+                  <span className="flex items-center gap-2 text-sm text-adipa-gray-700 dark:text-white">
                     <span aria-hidden="true">{icon}</span>
                     {label}
                   </span>

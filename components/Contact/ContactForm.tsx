@@ -127,7 +127,7 @@ export function ContactForm() {
         <h3 className="mb-2 text-xl font-black text-adipa-dark dark:text-white">
           ¡Mensaje enviado!
         </h3>
-        <p className="mb-6 text-adipa-gray-500">
+        <p className="mb-6 text-adipa-gray-500 dark:text-white">
           Gracias por contactarnos. Nuestro equipo te responderá en menos de 24 horas.
         </p>
         <Button
@@ -217,7 +217,7 @@ export function ContactForm() {
             errors.message ? inputError : inputValid,
           )}
         />
-        <p className="mt-1 text-right text-xs text-adipa-gray-400">
+        <p className="mt-1 text-right text-xs text-adipa-gray-400 dark:text-white">
           {formData.message.length}/500
         </p>
       </Field>
@@ -234,7 +234,7 @@ export function ContactForm() {
         Enviar mensaje
       </Button>
 
-      <p className="text-center text-xs text-adipa-gray-400">
+      <p className="text-center text-xs text-adipa-gray-400 dark:text-white">
         Al enviar, aceptas nuestra{' '}
         <a href="#" className="text-adipa-purple hover:underline">
           Política de Privacidad

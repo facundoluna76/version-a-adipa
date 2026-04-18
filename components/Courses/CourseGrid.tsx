@@ -129,7 +129,7 @@ export function CourseGrid() {
             Cursos que te permitirán{' '}
             <span className="gradient-text">potenciar tu carrera</span>
           </h2>
-          <p className="mx-auto max-w-xl text-adipa-gray-500 dark:text-adipa-gray-400">
+          <p className="mx-auto max-w-xl text-adipa-gray-500 dark:text-white">
             Formación de alto impacto impartida por los mejores especialistas de
             Latinoamérica.
           </p>
@@ -164,7 +164,7 @@ export function CourseGrid() {
                     'flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors lg:hidden',
                     activeCount > 0
                       ? 'border-adipa-purple bg-adipa-purple/10 text-adipa-purple'
-                      : 'border-adipa-gray-200 bg-white text-adipa-gray-700 dark:border-adipa-gray-700 dark:bg-adipa-gray-900 dark:text-adipa-gray-300',
+                      : 'border-adipa-gray-200 bg-white text-adipa-gray-700 dark:border-adipa-gray-700 dark:bg-adipa-gray-900 dark:text-white',
                   )}
                   aria-label={`Abrir filtros${activeCount > 0 ? `, ${activeCount} activos` : ''}`}
                 >
@@ -179,7 +179,7 @@ export function CourseGrid() {
 
                 {/* Result count */}
                 <p
-                  className="text-sm text-adipa-gray-500 dark:text-adipa-gray-400"
+                  className="text-sm text-adipa-gray-500 dark:text-white"
                   aria-live="polite"
                   aria-atomic="true"
                 >
@@ -205,7 +205,7 @@ export function CourseGrid() {
                   className={clsx(
                     'rounded-full border border-adipa-gray-200 bg-white py-1.5 pl-3 pr-8 text-sm text-adipa-gray-700',
                     'focus:border-adipa-purple focus:outline-none focus:ring-2 focus:ring-adipa-purple/20',
-                    'dark:border-adipa-gray-700 dark:bg-adipa-gray-900 dark:text-adipa-gray-300',
+                    'dark:border-adipa-gray-700 dark:bg-adipa-gray-900 dark:text-white',
                     'cursor-pointer appearance-none',
                   )}
                   style={{
@@ -246,7 +246,7 @@ export function CourseGrid() {
                 <h3 className="mb-2 text-lg font-bold text-adipa-dark dark:text-white">
                   Sin resultados
                 </h3>
-                <p className="mb-5 text-sm text-adipa-gray-500">
+                <p className="mb-5 text-sm text-adipa-gray-500 dark:text-white">
                   Ningún curso coincide con los filtros seleccionados.
                 </p>
                 <button

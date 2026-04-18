@@ -14,9 +14,9 @@ const variantClasses: Record<NonNullable<ButtonProps['variant']>, string> = {
   secondary:
     'bg-white text-adipa-purple border-2 border-adipa-purple hover:bg-adipa-purple hover:text-white',
   outline:
-    'border border-adipa-gray-200 bg-transparent text-adipa-gray-700 hover:border-adipa-purple hover:text-adipa-purple dark:border-adipa-gray-700 dark:text-adipa-gray-200',
+    'border border-adipa-gray-200 bg-transparent text-adipa-gray-700 hover:border-adipa-purple hover:text-adipa-purple dark:border-adipa-gray-700 dark:text-white',
   ghost:
-    'bg-transparent text-adipa-gray-700 hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-200',
+    'bg-transparent text-adipa-gray-700 hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-white',
 };
 
 const sizeClasses: Record<NonNullable<ButtonProps['size']>, string> = {

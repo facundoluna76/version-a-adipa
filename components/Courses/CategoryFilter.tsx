@@ -41,7 +41,7 @@ export function CategoryFilter({
                 : [
                     'border border-adipa-gray-200 bg-white text-adipa-gray-700',
                     'hover:border-adipa-purple hover:text-adipa-purple',
-                    'dark:border-adipa-gray-700 dark:bg-adipa-gray-900/60 dark:text-adipa-gray-300',
+                    'dark:border-adipa-gray-700 dark:bg-adipa-gray-900/60 dark:text-white',
                     'dark:hover:border-adipa-purple dark:hover:text-adipa-purple cursor-pointer',
                   ],
             )}

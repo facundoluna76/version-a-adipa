@@ -117,7 +117,7 @@ export function Header() {
                       'py-2 pl-4 pr-12 text-sm text-adipa-gray-700',
                       'placeholder:text-adipa-gray-500 transition-all duration-200',
                       'focus:border-adipa-purple focus:ring-2 focus:ring-adipa-purple/20 focus:outline-none',
-                      'dark:border-adipa-gray-700 dark:bg-adipa-gray-900/80 dark:text-adipa-gray-200',
+                      'dark:border-adipa-gray-700 dark:bg-adipa-gray-900/80 dark:text-white dark:placeholder:text-white',
                     )}
                   />
                   <button
@@ -135,7 +135,7 @@ export function Header() {
                 <button
                   onClick={toggle}
                   aria-label={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}
-                  className="rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400 dark:hover:bg-adipa-gray-700 cursor-pointer"
+                  className="rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-white dark:hover:bg-adipa-gray-700 cursor-pointer"
                 >
                   {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
@@ -143,7 +143,7 @@ export function Header() {
                 {/* Cart */}
                 <button
                   aria-label="Ver carrito (0 items)"
-                  className="relative rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400 cursor-pointer"
+                  className="relative rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-white cursor-pointer"
                 >
                   <ShoppingCart size={18} />
                   <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-adipa-red text-[10px] font-bold text-white">
@@ -153,7 +153,7 @@ export function Header() {
 
                 {/* Auth */}
                 <div className="hidden items-center gap-2 sm:flex">
-                  <button className="rounded-full px-4 py-2 text-sm font-semibold text-adipa-gray-700 transition-colors hover:text-adipa-purple dark:text-adipa-gray-300 cursor-pointer">
+                  <button className="rounded-full px-4 py-2 text-sm font-semibold text-adipa-gray-700 transition-colors hover:text-adipa-purple dark:text-white cursor-pointer">
                     Iniciar Sesión
                   </button>
                   <button className="rounded-full bg-adipa-purple px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-adipa-purple-600 hover:shadow-md hover:shadow-adipa-purple/25 cursor-pointer">
@@ -166,7 +166,7 @@ export function Header() {
                   onClick={() => setIsMobileOpen((v) => !v)}
                   aria-label={isMobileOpen ? 'Cerrar menú' : 'Abrir menú'}
                   aria-expanded={isMobileOpen}
-                  className="rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 lg:hidden"
+                  className="rounded-full p-2 text-adipa-gray-500 dark:text-white transition-colors hover:bg-adipa-purple-50 lg:hidden"
                 >
                   {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
@@ -183,7 +183,7 @@ export function Header() {
                 className="mr-4 flex items-center gap-1.5 text-sm text-adipa-gray-500 hover:text-adipa-purple"
               >
                 <MessageCircle size={14} className="text-green-500" />
-                <span>Descubre ADIPA</span>
+                <span className="dark:text-white">Descubre ADIPA</span>
               </Link>
               </FadeIn>
               <FadeIn delay={240}>
@@ -197,7 +197,7 @@ export function Header() {
                     'flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors duration-200',
                     item.label === 'Cursos'
                       ? 'font-bold text-adipa-purple'
-                      : 'text-adipa-gray-700 hover:text-adipa-purple dark:text-adipa-gray-300',
+                      : 'text-adipa-gray-700 hover:text-adipa-purple dark:text-white',
                   )}
                 >
                   {item.label}
@@ -233,7 +233,7 @@ export function Header() {
               <button
                 onClick={() => setIsMobileOpen(false)}
                 aria-label="Cerrar menú"
-                className="rounded-full p-2 text-adipa-gray-500 hover:bg-adipa-purple-50"
+                className="rounded-full p-2 text-adipa-gray-500 dark:text-white hover:bg-adipa-purple-50"
               >
                 <X size={20} />
               </button>
@@ -258,7 +258,7 @@ export function Header() {
                     'flex items-center gap-2 rounded-xl px-4 py-3 text-sm font-medium transition-colors duration-150',
                     item.label === 'Cursos'
                       ? 'bg-adipa-purple-50 font-bold text-adipa-purple'
-                      : 'text-adipa-gray-700 hover:bg-adipa-gray-50 dark:text-adipa-gray-300',
+                      : 'text-adipa-gray-700 hover:bg-adipa-gray-50 dark:text-white',
                   )}
                 >
                   {item.label}

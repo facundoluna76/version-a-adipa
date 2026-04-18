@@ -77,18 +77,18 @@ export function CourseCard({ course }: CourseCardProps) {
         </h3>
 
         {/* Instructor */}
-        <p className="mb-3 text-sm text-adipa-gray-500 dark:text-adipa-gray-400">
+        <p className="mb-3 text-sm text-adipa-gray-500 dark:text-white">
           {course.instructor}{' '}
           <span className="text-xs font-normal">· {course.instructorTitle}</span>
         </p>
 
         {/* Description */}
-        <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-adipa-gray-500 dark:text-adipa-gray-400">
+        <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-adipa-gray-500 dark:text-white">
           {course.description}
         </p>
 
         {/* Meta info */}
-        <div className="mb-4 flex flex-wrap gap-3 text-xs text-adipa-gray-500 dark:text-adipa-gray-400">
+        <div className="mb-4 flex flex-wrap gap-3 text-xs text-adipa-gray-500 dark:text-white">
           <span className="flex items-center gap-1">
             <Calendar size={12} className="text-adipa-purple" aria-hidden="true" />
             <span>
@@ -119,7 +119,7 @@ export function CourseCard({ course }: CourseCardProps) {
             ))}
           </div>
           <span className="text-xs font-semibold text-adipa-orange">{course.rating.toFixed(1)}</span>
-          <span className="flex items-center gap-1 text-xs text-adipa-gray-500">
+          <span className="flex items-center gap-1 text-xs text-adipa-gray-500 dark:text-white">
             <Users size={11} aria-hidden="true" />
             {course.reviewCount} reseñas
           </span>
@@ -132,7 +132,7 @@ export function CourseCard({ course }: CourseCardProps) {
         <div className="flex items-center justify-between border-t border-adipa-gray-200 pt-4 dark:border-adipa-gray-700/60">
           <div>
             <p
-              className="text-xs text-adipa-gray-400 line-through"
+              className="text-xs text-adipa-gray-400 dark:text-white line-through"
               aria-label={`Precio original: ${formatPrice(course.originalPrice)}`}
             >
               {formatPrice(course.originalPrice)}

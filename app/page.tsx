@@ -48,7 +48,7 @@ export default function Home() {
                     <span className="text-2xl font-black text-adipa-purple sm:text-3xl">
                       {stat.value}
                     </span>
-                    <span className="mt-1 text-xs text-adipa-gray-500 sm:text-sm">
+                    <span className="mt-1 text-xs text-adipa-gray-500 dark:text-white sm:text-sm">
                       {stat.label}
                     </span>
                   </div>
@@ -78,7 +78,7 @@ export default function Home() {
                 La plataforma que eligen los{' '}
                 <span className="gradient-text">profesionales</span>
               </h2>
-              <p className="mx-auto max-w-xl text-adipa-gray-500">
+              <p className="mx-auto max-w-xl text-adipa-gray-500 dark:text-white">
                 Más de 15.000 psicólogos y profesionales de la salud mental ya
                 eligieron ADIPA para potenciar su carrera.
               </p>
@@ -115,7 +115,7 @@ export default function Home() {
                     <h3 className="mb-2 font-bold text-adipa-dark dark:text-white">
                       {title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-adipa-gray-500">{desc}</p>
+                    <p className="text-sm leading-relaxed text-adipa-gray-500 dark:text-white">{desc}</p>
                   </div>
                 </FadeIn>
               ))}
@@ -181,7 +181,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <p className="mb-5 text-sm leading-relaxed text-adipa-gray-700 dark:text-adipa-gray-300">
+                  <p className="mb-5 text-sm leading-relaxed text-adipa-gray-700 dark:text-white">
                     &ldquo;{quote}&rdquo;
                   </p>
 
@@ -193,7 +193,7 @@ export default function Home() {
                       <cite className="block text-sm font-bold not-italic text-adipa-dark dark:text-white">
                         {name}
                       </cite>
-                      <span className="text-xs text-adipa-gray-500">{role}</span>
+                      <span className="text-xs text-adipa-gray-500 dark:text-white">{role}</span>
                     </div>
                   </footer>
                 </blockquote>
@@ -223,7 +223,7 @@ export default function Home() {
                   ¿Tienes dudas?{' '}
                   <span className="gradient-text">Estamos para ayudarte</span>
                 </h2>
-                <p className="mb-8 text-adipa-gray-500">
+                <p className="mb-8 text-adipa-gray-500 dark:text-white">
                   Nuestro equipo de orientadores vocacionales te ayudará a
                   encontrar el programa ideal para potenciar tu carrera.
                 </p>
@@ -263,7 +263,7 @@ export default function Home() {
                           {title}
                         </p>
                         <p className="text-sm text-adipa-purple">{detail}</p>
-                        <p className="text-xs text-adipa-gray-400">{sub}</p>
+                        <p className="text-xs text-adipa-gray-400 dark:text-white">{sub}</p>
                       </div>
                     </li>
                   ))}
@@ -276,7 +276,7 @@ export default function Home() {
                     'Respuesta garantizada en 24 horas',
                     'Información detallada de cada programa',
                   ].map((item) => (
-                    <p key={item} className="flex items-center gap-2 text-sm text-adipa-gray-600 dark:text-adipa-gray-400">
+                    <p key={item} className="flex items-center gap-2 text-sm text-adipa-gray-600 dark:text-white">
                       <CheckCircle size={16} className="flex-shrink-0 text-green-500" aria-hidden="true" />
                       {item}
                     </p>
