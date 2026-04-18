@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useTheme } from '@/components/providers/ThemeProvider';
+import { FadeIn } from '@/components/ui/FadeIn';
 import { NAV_ITEMS } from '@/data/courses';
 
 export function Header() {
@@ -91,14 +92,21 @@ export function Header() {
           <div className="border-b border-adipa-gray-200 dark:border-adipa-gray-700/50">
             <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
               {/* Logo */}
+              <FadeIn>
               <Link href="/" className="flex-shrink-0" aria-label="ADIPA — Inicio">
-                <span className="logo-gradient text-2xl font-black tracking-tight">
-                  ADIPA
-                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo-adipa.svg"
+                  alt="ADIPA"
+                  width={120}
+                  height={23}
+                  className="h-7 w-auto"
+                />
               </Link>
+              </FadeIn>
 
               {/* Desktop search */}
-              <div className="mx-6 hidden max-w-md flex-1 lg:flex">
+              <FadeIn delay={60} className="mx-6 hidden max-w-md flex-1 lg:flex">
                 <div className="relative w-full">
                   <input
                     type="search"
@@ -119,15 +127,15 @@ export function Header() {
                     <Search size={16} />
                   </button>
                 </div>
-              </div>
+              </FadeIn>
 
               {/* Right actions */}
-              <div className="flex items-center gap-2">
+              <FadeIn delay={120} className="flex items-center gap-2">
                 {/* Dark mode toggle */}
                 <button
                   onClick={toggle}
                   aria-label={theme === 'dark' ? 'Modo claro' : 'Modo oscuro'}
-                  className="rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400 dark:hover:bg-adipa-gray-700"
+                  className="rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400 dark:hover:bg-adipa-gray-700 cursor-pointer"
                 >
                   {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
@@ -135,7 +143,7 @@ export function Header() {
                 {/* Cart */}
                 <button
                   aria-label="Ver carrito (0 items)"
-                  className="relative rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400"
+                  className="relative rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-adipa-gray-400 cursor-pointer"
                 >
                   <ShoppingCart size={18} />
                   <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-adipa-red text-[10px] font-bold text-white">
@@ -145,10 +153,10 @@ export function Header() {
 
                 {/* Auth */}
                 <div className="hidden items-center gap-2 sm:flex">
-                  <button className="rounded-full px-4 py-2 text-sm font-semibold text-adipa-gray-700 transition-colors hover:text-adipa-purple dark:text-adipa-gray-300">
+                  <button className="rounded-full px-4 py-2 text-sm font-semibold text-adipa-gray-700 transition-colors hover:text-adipa-purple dark:text-adipa-gray-300 cursor-pointer">
                     Iniciar Sesión
                   </button>
-                  <button className="rounded-full bg-adipa-purple px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-adipa-purple-600 hover:shadow-md hover:shadow-adipa-purple/25">
+                  <button className="rounded-full bg-adipa-purple px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-adipa-purple-600 hover:shadow-md hover:shadow-adipa-purple/25 cursor-pointer">
                     Regístrate
                   </button>
                 </div>
@@ -162,13 +170,14 @@ export function Header() {
                 >
                   {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
                 </button>
-              </div>
+              </FadeIn>
             </div>
           </div>
 
           {/* Navigation bar */}
           <nav aria-label="Navegación principal" className="hidden lg:block">
             <div className="mx-auto flex max-w-screen-xl items-center gap-1 px-4 py-2 sm:px-6 lg:px-8">
+              <FadeIn delay={180}>
               <Link
                 href="#"
                 className="mr-4 flex items-center gap-1.5 text-sm text-adipa-gray-500 hover:text-adipa-purple"
@@ -176,10 +185,13 @@ export function Header() {
                 <MessageCircle size={14} className="text-green-500" />
                 <span>Descubre ADIPA</span>
               </Link>
-              <div className="h-4 w-px bg-adipa-gray-200 dark:bg-adipa-gray-700" />
-              {NAV_ITEMS.map((item) => (
+              </FadeIn>
+              <FadeIn delay={240}>
+                <div className="h-4 w-px bg-adipa-gray-200 dark:bg-adipa-gray-700" />
+              </FadeIn>
+              {NAV_ITEMS.map((item, i) => (
+                <FadeIn key={item.label} delay={300 + i * 60}>
                 <Link
-                  key={item.label}
                   href={item.href}
                   className={clsx(
                     'flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium transition-colors duration-200',
@@ -200,6 +212,7 @@ export function Header() {
                     </span>
                   )}
                 </Link>
+                </FadeIn>
               ))}
             </div>
           </nav>
@@ -215,7 +228,8 @@ export function Header() {
           />
           <div className="absolute top-0 right-0 h-full w-80 overflow-y-auto bg-white shadow-2xl dark:bg-adipa-gray-900">
             <div className="flex items-center justify-between border-b border-adipa-gray-200 p-4 dark:border-adipa-gray-700">
-              <span className="logo-gradient text-xl font-black">ADIPA</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-adipa.svg" alt="ADIPA" width={100} height={19} className="h-6 w-auto" />
               <button
                 onClick={() => setIsMobileOpen(false)}
                 aria-label="Cerrar menú"

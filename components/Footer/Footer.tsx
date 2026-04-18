@@ -85,7 +85,7 @@ const SOCIAL_LINKS = [
 export function Footer() {
   return (
     <footer
-      className="border-t border-adipa-gray-200 bg-adipa-dark dark:border-adipa-gray-700/50"
+      className="border-t border-adipa-gray-200 bg-adipa-gray-50 dark:border-adipa-gray-700/50 dark:bg-adipa-dark"
       aria-label="Pie de página"
     >
       {/* Main footer */}
@@ -94,17 +94,22 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link href="/" aria-label="ADIPA — Inicio">
-              <span className="logo-gradient text-3xl font-black tracking-tight">
-                ADIPA
-              </span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-adipa.svg"
+                alt="ADIPA"
+                width={140}
+                height={27}
+                className="h-8 w-auto"
+              />
             </Link>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-adipa-gray-500">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-adipa-gray-500 dark:text-adipa-gray-500">
               Plataforma de educación continua especializada en psicología y
               salud mental con presencia en Chile y Latinoamérica.
             </p>
 
             {/* Contact info */}
-            <ul className="mt-5 space-y-2 text-sm text-adipa-gray-500">
+            <ul className="mt-5 space-y-2 text-sm text-adipa-gray-700 dark:text-adipa-gray-500">
               <li className="flex items-center gap-2">
                 <Mail size={14} className="flex-shrink-0 text-adipa-purple" aria-hidden="true" />
                 <a href="mailto:contacto@adipa.cl" className="hover:text-adipa-purple transition-colors">
@@ -130,7 +135,7 @@ export function Footer() {
                   key={name}
                   href={href}
                   aria-label={name}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-adipa-gray-400 transition-all hover:bg-adipa-purple hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-adipa-gray-200 text-adipa-gray-500 transition-all hover:bg-adipa-purple hover:text-white dark:bg-white/10 dark:text-adipa-gray-400"
                 >
                   <Icon size={16} />
                 </a>
@@ -141,7 +146,7 @@ export function Footer() {
           {/* Link columns */}
           {Object.values(FOOTER_LINKS).map((section) => (
             <div key={section.title}>
-              <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-white">
+              <h3 className="mb-4 text-sm font-bold uppercase tracking-widest text-adipa-dark dark:text-white">
                 {section.title}
               </h3>
               <ul className="space-y-2.5">
@@ -149,7 +154,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-adipa-gray-500 transition-colors hover:text-adipa-purple"
+                      className="text-sm text-adipa-gray-500 transition-colors hover:text-adipa-purple dark:text-adipa-gray-500"
                     >
                       {link.label}
                     </Link>
@@ -162,9 +167,9 @@ export function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/5">
+      <div className="border-t border-adipa-gray-200 dark:border-white/5">
         <div className="mx-auto flex max-w-screen-xl flex-col items-center justify-between gap-3 px-4 py-5 sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-xs text-adipa-gray-500">
+          <p className="text-xs text-adipa-gray-500 dark:text-adipa-gray-500">
             © {new Date().getFullYear()} ADIPA. Todos los derechos reservados.
           </p>
           <div className="flex gap-5">
