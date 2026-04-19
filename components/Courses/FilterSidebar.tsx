@@ -185,7 +185,6 @@ export function FilterSidebar({
                     className="h-4 w-4 flex-shrink-0 rounded border-adipa-gray-300 accent-adipa-purple"
                   />
                   <span className="flex flex-1 items-center gap-2 text-sm text-adipa-gray-700 dark:text-white">
-                    <span aria-hidden="true">{icon}</span>
                     {label}
                   </span>
                   <span className="rounded-full bg-adipa-gray-200 px-1.5 py-0.5 text-[10px] font-bold text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-white">
