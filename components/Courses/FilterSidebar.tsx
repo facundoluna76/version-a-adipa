@@ -101,7 +101,7 @@ export function FilterSidebar({
         <div className="relative">
           <Search
             size={13}
-            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-adipa-gray-400"
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-adipa-gray-400 dark:text-adipa-dark"
             aria-hidden="true"
           />
           <input
@@ -114,7 +114,7 @@ export function FilterSidebar({
               'w-full rounded-lg border border-adipa-gray-200 bg-adipa-gray-50 py-2 pl-8 pr-3 text-sm',
               'text-adipa-dark placeholder:text-adipa-gray-400',
               'transition-all focus:border-adipa-purple focus:bg-white focus:outline-none focus:ring-2 focus:ring-adipa-purple/20',
-              'dark:border-adipa-gray-700 dark:bg-adipa-gray-800 dark:text-white dark:focus:bg-adipa-gray-800',
+              'dark:border-adipa-gray-700 dark:bg-adipa-gray-800 dark:text-black dark:focus:bg-adipa-gray-800',
             )}
           />
         </div>
@@ -275,7 +275,7 @@ export function FilterSidebar({
         <button
           type="button"
           onClick={() => onChange({ ...DEFAULT_FILTERS })}
-          className="flex w-full items-center justify-center gap-2 rounded-lg border border-adipa-red/40 py-2 text-sm font-semibold text-adipa-red transition-colors hover:bg-adipa-red/5"
+          className="flex w-full items-center justify-center gap-2 rounded-lg border border-adipa-red/40 py-2 text-sm font-semibold text-adipa-red transition-colors hover:bg-adipa-red/5 cursor-pointer"
         >
           <X size={13} aria-hidden="true" />
           Limpiar filtros ({activeCount})
