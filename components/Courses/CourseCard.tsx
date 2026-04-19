@@ -3,6 +3,7 @@ import { Calendar, Clock, Star, Users } from 'lucide-react';
 import { clsx } from 'clsx';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { useCart } from '@/components/providers/CartProvider';
 import type { Course } from '@/types';
 
 interface CourseCardProps {
@@ -28,6 +29,9 @@ function formatDate(dateStr: string): string {
 }
 
 export function CourseCard({ course }: CourseCardProps) {
+  const { addToCart, items } = useCart();
+  const inCart = items.some((i) => i.course.id === course.id);
+
   return (
     <article
       className={clsx(
@@ -146,11 +150,12 @@ export function CourseCard({ course }: CourseCardProps) {
             </p>
           </div>
           <Button
-            variant="primary"
+            variant={inCart ? 'outline' : 'primary'}
             size="sm"
-            aria-label={`Inscribirme al curso ${course.title}`}
+            aria-label={inCart ? `${course.title} ya está en el carrito` : `Inscribirme al curso ${course.title}`}
+            onClick={() => addToCart(course)}
           >
-            Inscribirme
+            {inCart ? '✓ Agregado' : 'Inscribirme'}
           </Button>
         </div>
       </div>

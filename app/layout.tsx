@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import { CartProvider } from '@/components/providers/CartProvider';
+import { CartDrawer } from '@/components/Cart/CartDrawer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -83,7 +85,12 @@ export default function RootLayout({
   return (
     <html lang="es" className={inter.variable} suppressHydrationWarning>
       <body className="min-h-screen antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <CartProvider>
+            {children}
+            <CartDrawer />
+          </CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

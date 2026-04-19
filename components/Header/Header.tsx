@@ -14,11 +14,13 @@ import {
 } from 'lucide-react';
 import { clsx } from 'clsx';
 import { useTheme } from '@/components/providers/ThemeProvider';
+import { useCart } from '@/components/providers/CartProvider';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { NAV_ITEMS } from '@/data/courses';
 
 export function Header() {
   const { theme, toggle } = useTheme();
+  const { items, openCart } = useCart();
   const [isScrolled, setIsScrolled]     = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [showBanner, setShowBanner]     = useState(true);
@@ -142,12 +144,13 @@ export function Header() {
 
                 {/* Cart */}
                 <button
-                  aria-label="Ver carrito (0 items)"
+                  onClick={openCart}
+                  aria-label={`Ver carrito (${items.length} ${items.length === 1 ? 'item' : 'items'})`}
                   className="relative rounded-full p-2 text-adipa-gray-500 transition-colors hover:bg-adipa-purple-50 hover:text-adipa-purple dark:text-white cursor-pointer"
                 >
                   <ShoppingCart size={18} />
                   <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-adipa-red text-[10px] font-bold text-white">
-                    0
+                    {items.length}
                   </span>
                 </button>
 
