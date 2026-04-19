@@ -113,7 +113,7 @@ export function Hero() {
         >
           <path
             d="M0 48 C240 0 480 48 720 24 C960 0 1200 48 1440 24 L1440 48 Z"
-            className="fill-white dark:fill-adipa-dark"
+            className="fill-white dark:fill-adipa-gray-900"
           >
             <animate
               attributeName="d"
