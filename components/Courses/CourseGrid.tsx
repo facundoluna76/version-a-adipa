@@ -263,7 +263,6 @@ export function CourseGrid() {
             {filteredCourses.length > 0 && (
               <div className="mt-12 text-center">
                 <button className="inline-flex items-center gap-2 rounded-full border-2 border-adipa-purple px-8 py-3 font-semibold text-adipa-purple transition-all hover:bg-adipa-purple hover:text-white hover:shadow-lg hover:shadow-adipa-purple/25 cursor-pointer">
-                  <BookOpen size={16} aria-hidden="true" />
                   Ver todos los cursos
                 </button>
               </div>

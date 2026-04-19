@@ -64,7 +64,7 @@ export function Header() {
         {/* Promo banner */}
         {showBanner && (
           <div className="relative flex items-center justify-center bg-adipa-red px-4 py-2.5">
-            <p className="text-center text-sm font-medium text-white">
+            <p className="text-center text-sm font-medium text-white px-4">
               <Zap size={14} className="mr-1 inline-block" aria-hidden="true" />
               Escoge tu programa con hasta{' '}
               <strong>35% OFF</strong>{' '}
