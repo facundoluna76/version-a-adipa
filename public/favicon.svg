@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.5 -1.5 19.5 20.5">
+  <rect x="-1.5" y="-1.5" width="19.5" height="20.5" rx="4.5" fill="#ffffff"/>
+  <!-- Cyan: right stroke of A (g28) -->
+  <path d="M 7.079,0 L 13.533,17.241 L 16.422,17.241 L 9.680,0 Z" fill="#72caf7"/>
+  <!-- Purple: left lower part of A (path26) -->
+  <path d="M 8.283,10.547 l -0.963,-2.215 h -3.853 l -3.467,8.861 h 2.793 l 2.552,-6.694 c 0,0 2.979,0.048 2.938,0.048" fill="#7d61f1"/>
+</svg>

@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     'ADIPA',
     'educación continua',
   ],
+  icons: {
+    icon: '/favicon.svg',
+  },
   authors: [{ name: 'ADIPA' }],
   creator: 'ADIPA',
   publisher: 'ADIPA',
