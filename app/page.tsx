@@ -235,7 +235,7 @@ export default function Home() {
                       title: 'WhatsApp',
                       detail: '+56 9 1234 5678',
                       sub: 'Respuesta inmediata en horario laboral',
-                      color: 'text-green-500',
+                      color: 'text-adipa-cyan',
                     },
                     {
                       Icon: Mail,
@@ -277,7 +277,7 @@ export default function Home() {
                     'Información detallada de cada programa',
                   ].map((item) => (
                     <p key={item} className="flex items-center gap-2 text-sm text-adipa-gray-600 dark:text-white">
-                      <CheckCircle size={16} className="flex-shrink-0 text-green-500" aria-hidden="true" />
+                      <CheckCircle size={16} className="flex-shrink-0 text-adipa-cyan" aria-hidden="true" />
                       {item}
                     </p>
                   ))}

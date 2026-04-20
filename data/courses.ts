@@ -249,7 +249,7 @@ export const COURSES: Course[] = [
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Recursos', href: '#' },
-  { label: 'Seminarios', href: '#', badge: 'GRATIS', badgeColor: 'green' },
+  { label: 'Seminarios', href: '#', badge: 'GRATIS', badgeColor: 'cyan' },
   { label: 'Congreso', href: '#', badge: 'NUEVO', badgeColor: 'red' },
   { label: 'Especializaciones', href: '#' },
   { label: 'Acreditaciones', href: '#' },

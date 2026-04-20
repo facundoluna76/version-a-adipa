@@ -121,8 +121,8 @@ export function ContactForm() {
         aria-live="polite"
         className="flex flex-col items-center justify-center rounded-2xl bg-white p-12 text-center shadow-sm dark:bg-adipa-gray-900/60"
       >
-        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/30">
-          <CheckCircle size={32} className="text-green-600" aria-hidden="true" />
+        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-adipa-purple-50 dark:bg-adipa-purple-800/30">
+          <CheckCircle size={32} className="text-adipa-purple" aria-hidden="true" />
         </div>
         <h3 className="mb-2 text-xl font-black text-adipa-dark dark:text-white">
           ¡Mensaje enviado!

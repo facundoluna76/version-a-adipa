@@ -6,22 +6,22 @@
 /* ─── ADIPA Brand Design Tokens ─── */
 @theme {
   /* Primary */
-  --color-adipa-purple:      #6C5CE7;
-  --color-adipa-purple-600:  #5B4DD6;
-  --color-adipa-purple-700:  #4B3FBF;
-  --color-adipa-purple-800:  #3A30A8;
-  --color-adipa-purple-light: #8B7FEF;
+  --color-adipa-purple:      #704efd;
+  --color-adipa-purple-600:  #5C3DE8;
+  --color-adipa-purple-700:  #4B2CD3;
+  --color-adipa-purple-800:  #3A1CBE;
+  --color-adipa-purple-light: #9074FE;
   --color-adipa-purple-50:   #F0EEFF;
   --color-adipa-purple-100:  #E0DCFF;
 
   /* Accent Cyan */
-  --color-adipa-cyan:        #22D3EE;
-  --color-adipa-cyan-600:    #0EA5C9;
+  --color-adipa-cyan:        #2cb7ff;
+  --color-adipa-cyan-600:    #0095E6;
 
   /* Alert / Promo */
   --color-adipa-orange:      #F59E0B;
   --color-adipa-orange-600:  #D97706;
-  --color-adipa-red:         #EF4444;
+  --color-adipa-red:         #FF017C;
 
   /* Neutrals */
   --color-adipa-dark:        #0F0F1A;
@@ -84,13 +84,13 @@ body {
   background: var(--bg-secondary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #6C5CE7;
+  background: #704efd;
   border-radius: 3px;
 }
 
 /* ─── ADIPA Logo gradient ─── */
 .logo-gradient {
-  background: linear-gradient(135deg, #22D3EE 0%, #6C5CE7 100%);
+  background: linear-gradient(135deg, #2cb7ff 0%, #704efd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -98,7 +98,7 @@ body {
 
 /* ─── Hero gradient background ─── */
 .hero-gradient {
-  background: linear-gradient(135deg, #6C5CE7 0%, #8B5CF6 50%, #7C3AED 100%);
+  background: linear-gradient(135deg, #704efd 0%, #8B6FFE 50%, #5C3DE8 100%);
 }
 
 /* ─── Card hover lift ─── */
@@ -107,12 +107,12 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(108, 92, 231, 0.15);
+  box-shadow: 0 20px 40px rgba(112, 78, 253, 0.15);
 }
 
 /* ─── Gradient text utility ─── */
 .gradient-text {
-  background: linear-gradient(135deg, #6C5CE7 0%, #22D3EE 100%);
+  background: linear-gradient(135deg, #704efd 0%, #2cb7ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -120,9 +120,9 @@ body {
 
 /* ─── Pill filter active state ─── */
 .filter-pill-active {
-  background-color: #6C5CE7;
+  background-color: #704efd;
   color: white;
-  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.35);
+  box-shadow: 0 4px 12px rgba(112, 78, 253, 0.35);
 }
 
 /* ─── Number animation ─── */
@@ -139,7 +139,7 @@ body {
 
 /* ─── Focus ring ─── */
 :focus-visible {
-  outline: 2px solid #6C5CE7;
+  outline: 2px solid #704efd;
   outline-offset: 2px;
   border-radius: 4px;
 }

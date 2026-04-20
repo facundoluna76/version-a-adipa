@@ -98,8 +98,8 @@ Definidos en `data/courses.ts`:
 
 | Token            | Color     | Uso                      |
 |-----------------|-----------|--------------------------|
-| `adipa-purple`  | `#6C5CE7` | Color principal, CTAs    |
-| `adipa-cyan`    | `#22D3EE` | Acento, botón búsqueda   |
+| `adipa-purple`  | `#704efd` | Color principal, CTAs    |
+| `adipa-cyan`    | `#2cb7ff` | Acento, botón búsqueda   |
 | `adipa-orange`  | `#F59E0B` | Descuentos, estrellas    |
-| `adipa-red`     | `#EF4444` | Promo banner, alertas    |
+| `adipa-red`     | `#FF017C` | Promo banner, alertas    |
 | `adipa-dark`    | `#0F0F1A` | Fondo dark mode          |

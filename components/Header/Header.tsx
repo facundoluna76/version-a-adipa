@@ -185,7 +185,7 @@ export function Header() {
                 href="#"
                 className="mr-4 flex items-center gap-1.5 text-sm text-adipa-gray-500 hover:text-adipa-purple"
               >
-                <MessageCircle size={14} className="text-green-500" />
+                <MessageCircle size={14} className="text-adipa-cyan" />
                 <span className="dark:text-white">Descubre ADIPA</span>
               </Link>
               </FadeIn>
@@ -208,7 +208,7 @@ export function Header() {
                     <span
                       className={clsx(
                         'rounded-sm px-1 py-0.5 text-[10px] font-bold text-white',
-                        item.badgeColor === 'green' ? 'bg-green-500' : 'bg-adipa-red',
+                        item.badgeColor === 'cyan' ? 'bg-adipa-cyan' : 'bg-adipa-red',
                       )}
                     >
                       {item.badge}
@@ -269,7 +269,7 @@ export function Header() {
                     <span
                       className={clsx(
                         'rounded-sm px-1.5 py-0.5 text-[10px] font-bold text-white',
-                        item.badgeColor === 'green' ? 'bg-green-500' : 'bg-adipa-red',
+                        item.badgeColor === 'cyan' ? 'bg-adipa-cyan' : 'bg-adipa-red',
                       )}
                     >
                       {item.badge}
