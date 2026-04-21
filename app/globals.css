@@ -205,6 +205,21 @@ input[type="checkbox"]:checked {
   animation: wave-drift var(--wave-duration, 12s) ease-in-out infinite;
 }
 
+/* ─── Testimonials marquee ─── */
+@keyframes testimonials-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.testimonials-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content;
+  animation: testimonials-scroll 28s linear infinite;
+}
+.testimonials-track:hover {
+  animation-play-state: paused;
+}
+
 /* ─── FadeIn scroll animation ─── */
 @keyframes fadeInUp {
   from {

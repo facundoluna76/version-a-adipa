@@ -4,6 +4,7 @@ import { CourseGrid } from '@/components/Courses/CourseGrid';
 import { ContactForm } from '@/components/Contact/ContactForm';
 import { Footer } from '@/components/Footer/Footer';
 import { FadeIn } from '@/components/ui/FadeIn';
+import { TestimonialsCarousel } from '@/components/ui/TestimonialsCarousel';
 import { STATS } from '@/data/courses';
 import {
   ShieldCheck,
@@ -15,6 +16,14 @@ import {
   Phone,
   MessageCircle,
 } from 'lucide-react';
+
+const TESTIMONIALS = [
+  { name: 'Ps. Javiera Mendoza',   role: 'Psicóloga Clínica, Santiago',       quote: 'ADIPA transformó mi práctica clínica. El curso de psicoterapia breve me dio herramientas concretas que aplico desde la primera sesión.',                              rating: 5, avatar: 'JM' },
+  { name: 'Dr. Cristóbal Reyes',   role: 'Neuropsicólogo, Buenos Aires',       quote: 'La calidad de los docentes es impresionante. Aprendí más en 20 horas que en años de práctica independiente. Totalmente recomendado.',                                   rating: 5, avatar: 'CR' },
+  { name: 'Mg. Daniela Fuentes',   role: 'Psicóloga Organizacional, Medellín', quote: 'Excelente plataforma. El contenido es actualizado, los materiales son de calidad y el soporte al estudiante es muy rápido.',                                            rating: 5, avatar: 'DF' },
+  { name: 'Lic. Rodrigo Saavedra', role: 'Psicoterapeuta, Lima',               quote: 'Los docentes tienen un nivel académico excepcional. Cada módulo está muy bien estructurado y los casos clínicos son muy pertinentes.',                                   rating: 5, avatar: 'RS' },
+  { name: 'Ps. Camila Torres',     role: 'Psicóloga Infantil, Bogotá',         quote: 'Me encanta la flexibilidad de los cursos. Puedo aprender a mi ritmo sin descuidar mis pacientes. 100% recomendado para profesionales.',                                  rating: 5, avatar: 'CT' },
+];
 
 export default function Home() {
   return (
@@ -126,81 +135,19 @@ export default function Home() {
         {/* Testimonials */}
         <section
           aria-labelledby="testimonials-heading"
-          className="bg-adipa-purple-50 py-20 dark:bg-adipa-gray-900/50"
+          className="py-20 dark:bg-adipa-gray-900/50"
+          style={{ backgroundColor: '#f3f4ff' }}
         >
-          <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-            <FadeIn className="mb-12 text-center">
-              <h2
-                id="testimonials-heading"
-                className="text-2xl font-black text-adipa-dark dark:text-white sm:text-3xl"
-              >
-                Lo que dicen nuestros <span className="gradient-text">estudiantes</span>
-              </h2>
-            </FadeIn>
+          <FadeIn className="mb-12 text-center">
+            <h2
+              id="testimonials-heading"
+              className="text-2xl font-black text-adipa-dark dark:text-white sm:text-3xl"
+            >
+              Lo que dicen nuestros <span className="gradient-text">estudiantes</span>
+            </h2>
+          </FadeIn>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                {
-                  name: 'Ps. Javiera Mendoza',
-                  role: 'Psicóloga Clínica, Santiago',
-                  quote:
-                    'ADIPA transformó mi práctica clínica. El curso de psicoterapia breve me dio herramientas concretas que aplico desde la primera sesión.',
-                  rating: 5,
-                  avatar: 'JM',
-                },
-                {
-                  name: 'Dr. Cristóbal Reyes',
-                  role: 'Neuropsicólogo, Buenos Aires',
-                  quote:
-                    'La calidad de los docentes es impresionante. Aprendí más en 20 horas que en años de práctica independiente. Totalmente recomendado.',
-                  rating: 5,
-                  avatar: 'CR',
-                },
-                {
-                  name: 'Mg. Daniela Fuentes',
-                  role: 'Psicóloga Organizacional, Medellín',
-                  quote:
-                    'Excelente plataforma. El contenido es actualizado, los materiales son de calidad y el soporte al estudiante es muy rápido.',
-                  rating: 5,
-                  avatar: 'DF',
-                },
-              ].map(({ name, role, quote, rating, avatar }, i) => (
-                <FadeIn key={name} delay={(i + 1) * 100}>
-                <blockquote
-                  className="rounded-2xl bg-white p-6 shadow-sm dark:bg-adipa-gray-900"
-                >
-                  {/* Stars */}
-                  <div
-                    className="mb-4 flex gap-1"
-                    aria-label={`${rating} estrellas de 5`}
-                  >
-                    {Array.from({ length: rating }).map((_, i) => (
-                      <span key={i} className="text-adipa-orange" aria-hidden="true">
-                        ★
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="mb-5 text-sm leading-relaxed text-adipa-gray-700 dark:text-white">
-                    &ldquo;{quote}&rdquo;
-                  </p>
-
-                  <footer className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-adipa-purple text-sm font-bold text-white">
-                      {avatar}
-                    </div>
-                    <div>
-                      <cite className="block text-sm font-bold not-italic text-adipa-dark dark:text-white">
-                        {name}
-                      </cite>
-                      <span className="text-xs text-adipa-gray-500 dark:text-white">{role}</span>
-                    </div>
-                  </footer>
-                </blockquote>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
+          <TestimonialsCarousel testimonials={TESTIMONIALS} />
         </section>
 
         {/* Contact section */}
