@@ -1,12 +1,13 @@
 import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { CartProvider } from '@/components/providers/CartProvider';
 import { CartDrawer } from '@/components/Cart/CartDrawer';
 
-const inter = Inter({
+const inter = Poppins({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '900'],
   variable: '--font-sans',
   display: 'swap',
 });

@@ -10,9 +10,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantClasses: Record<NonNullable<ButtonProps['variant']>, string> = {
   primary:
-    'bg-adipa-purple text-white hover:bg-adipa-purple-600 active:bg-adipa-purple-700 shadow-sm hover:shadow-md hover:shadow-adipa-purple/25',
+    'bg-adipa-purple text-white hover:bg-adipa-cyan active:bg-adipa-cyan-600 shadow-sm hover:shadow-md hover:shadow-adipa-cyan/25',
   secondary:
-    'bg-white text-adipa-purple border-2 border-adipa-purple hover:bg-adipa-purple hover:text-white',
+    'bg-white text-adipa-purple border-2 border-adipa-purple hover:bg-adipa-cyan hover:border-adipa-cyan hover:text-white',
   outline:
     'border border-adipa-gray-200 bg-transparent text-adipa-gray-700 hover:border-adipa-purple hover:text-adipa-purple dark:border-adipa-gray-700 dark:text-white',
   ghost:
@@ -39,7 +39,7 @@ export function Button({
     <button
       disabled={disabled || loading}
       className={clsx(
-        'inline-flex cursor-pointer items-center justify-center gap-2 rounded-full font-semibold',
+        'inline-flex cursor-pointer items-center justify-center gap-2 rounded-[7px] font-semibold',
         'transition-all duration-200 ease-in-out',
         'focus-visible:outline-2 focus-visible:outline-adipa-purple focus-visible:outline-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',

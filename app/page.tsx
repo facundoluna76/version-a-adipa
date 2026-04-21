@@ -134,7 +134,7 @@ export default function Home() {
                 id="testimonials-heading"
                 className="text-2xl font-black text-adipa-dark dark:text-white sm:text-3xl"
               >
-                Lo que dicen nuestros estudiantes
+                Lo que dicen nuestros <span className="gradient-text">estudiantes</span>
               </h2>
             </FadeIn>
 

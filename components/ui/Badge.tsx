@@ -40,7 +40,7 @@ export function Badge({ children, variant = 'default', modality, className }: Ba
     return (
       <span
         className={clsx(
-          'rounded-md bg-adipa-red px-2 py-0.5 text-xs font-bold text-white',
+          'rounded-[7px] bg-adipa-cyan px-2 py-0.5 text-xs font-bold text-white',
           className,
         )}
       >

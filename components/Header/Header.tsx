@@ -115,7 +115,7 @@ export function Header() {
                     placeholder="¿Qué quieres aprender?"
                     aria-label="Buscar cursos"
                     className={clsx(
-                      'w-full rounded-full border border-adipa-gray-200 bg-adipa-gray-50',
+                      'w-full rounded-[7px] border border-adipa-gray-200 bg-adipa-gray-50',
                       'py-2 pl-4 pr-12 text-sm text-adipa-gray-700',
                       'placeholder:text-adipa-gray-500 transition-all duration-200',
                       'focus:border-adipa-purple focus:ring-2 focus:ring-adipa-purple/20 focus:outline-none',
@@ -124,7 +124,7 @@ export function Header() {
                   />
                   <button
                     aria-label="Buscar"
-                    className="absolute right-0 top-0 flex h-full items-center justify-center rounded-r-full bg-adipa-cyan px-4 text-white transition-colors hover:bg-adipa-cyan-600"
+                    className="absolute right-0 top-0 flex h-full items-center justify-center rounded-r-[7px] bg-adipa-cyan px-4 text-white transition-colors hover:bg-adipa-cyan-600"
                   >
                     <Search size={16} />
                   </button>
@@ -159,7 +159,7 @@ export function Header() {
                   <button className="rounded-full px-4 py-2 text-sm font-semibold text-adipa-gray-700 transition-colors hover:text-adipa-purple dark:text-white cursor-pointer">
                     Iniciar Sesión
                   </button>
-                  <button className="rounded-full bg-adipa-purple px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-adipa-purple-600 hover:shadow-md hover:shadow-adipa-purple/25 cursor-pointer">
+                  <button className="rounded-[7px] bg-adipa-purple px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-adipa-cyan hover:shadow-md hover:shadow-adipa-cyan/25 cursor-pointer">
                     Regístrate
                   </button>
                 </div>
@@ -207,7 +207,7 @@ export function Header() {
                   {item.badge && (
                     <span
                       className={clsx(
-                        'rounded-sm px-1 py-0.5 text-[10px] font-bold text-white',
+                        'rounded-[7px] px-1 py-0.5 text-[10px] font-bold text-white',
                         item.badgeColor === 'cyan' ? 'bg-adipa-cyan' : 'bg-adipa-red',
                       )}
                     >
@@ -246,7 +246,7 @@ export function Header() {
                 <input
                   type="search"
                   placeholder="¿Qué quieres aprender?"
-                  className="w-full rounded-full border border-adipa-gray-200 bg-adipa-gray-50 py-2.5 pl-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-adipa-purple/20 dark:border-adipa-gray-700 dark:bg-adipa-gray-800"
+                  className="w-full rounded-[7px] border border-adipa-gray-200 bg-adipa-gray-50 py-2.5 pl-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-adipa-purple/20 dark:border-adipa-gray-700 dark:bg-adipa-gray-800"
                 />
                 <Search size={16} className="absolute right-3 top-3 text-adipa-gray-400" />
               </div>
@@ -268,7 +268,7 @@ export function Header() {
                   {item.badge && (
                     <span
                       className={clsx(
-                        'rounded-sm px-1.5 py-0.5 text-[10px] font-bold text-white',
+                        'rounded-[7px] px-1.5 py-0.5 text-[10px] font-bold text-white',
                         item.badgeColor === 'cyan' ? 'bg-adipa-cyan' : 'bg-adipa-red',
                       )}
                     >
@@ -279,10 +279,10 @@ export function Header() {
               ))}
             </nav>
             <div className="border-t border-adipa-gray-200 p-4 dark:border-adipa-gray-700">
-              <button className="mb-2 w-full rounded-full border border-adipa-purple py-2.5 text-sm font-semibold text-adipa-purple hover:bg-adipa-purple-50">
+              <button className="mb-2 w-full rounded-[7px] border border-adipa-purple py-2.5 text-sm font-semibold text-adipa-purple hover:bg-adipa-purple-50">
                 Iniciar Sesión
               </button>
-              <button className="w-full rounded-full bg-adipa-purple py-2.5 text-sm font-semibold text-white hover:bg-adipa-purple-600">
+              <button className="w-full rounded-[7px] bg-adipa-purple py-2.5 text-sm font-semibold text-white hover:bg-adipa-cyan">
                 Regístrate
               </button>
             </div>

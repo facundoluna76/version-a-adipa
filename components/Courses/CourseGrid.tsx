@@ -252,7 +252,7 @@ export function CourseGrid() {
                 <button
                   type="button"
                   onClick={() => setFilters(DEFAULT_FILTERS)}
-                  className="rounded-full bg-adipa-purple px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-adipa-purple-600"
+                  className="rounded-full bg-adipa-purple px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-adipa-cyan"
                 >
                   Limpiar filtros
                 </button>
@@ -262,7 +262,7 @@ export function CourseGrid() {
             {/* ── Load more CTA ── */}
             {filteredCourses.length > 0 && (
               <div className="mt-12 text-center">
-                <button className="inline-flex items-center gap-2 rounded-full border-2 border-adipa-purple px-8 py-3 font-semibold text-adipa-purple transition-all hover:bg-adipa-purple hover:text-white hover:shadow-lg hover:shadow-adipa-purple/25 cursor-pointer">
+                <button className="inline-flex items-center gap-2 rounded-[7px] border-2 border-adipa-purple px-8 py-3 font-semibold text-adipa-purple transition-all hover:bg-adipa-purple hover:text-white hover:shadow-lg hover:shadow-adipa-purple/25 cursor-pointer">
                   Ver todos los cursos
                 </button>
               </div>

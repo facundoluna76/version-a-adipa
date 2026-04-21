@@ -63,7 +63,7 @@ export function Hero() {
         {/* Search bar */}
         <FadeIn delay={300} className="mx-auto mb-5 max-w-2xl">
         <form onSubmit={handleSearch} className="w-full" role="search">
-          <div className="flex overflow-hidden rounded-full bg-white shadow-2xl shadow-adipa-purple/30">
+          <div className="flex overflow-hidden rounded-[7px] bg-white shadow-2xl shadow-adipa-purple/30">
             <input
               type="search"
               value={query}
@@ -94,7 +94,7 @@ export function Hero() {
                 setQuery(tag);
                 document.getElementById('cursos')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="rounded-full border border-white/30 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 cursor-pointer"
+              className="rounded-[7px] border border-white/30 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 cursor-pointer"
             >
               {tag}
             </button>

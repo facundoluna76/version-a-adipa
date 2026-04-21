@@ -76,7 +76,7 @@ export function CartDrawer() {
             </p>
             <button
               onClick={closeCart}
-              className="rounded-full bg-adipa-purple px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-adipa-purple-600"
+              className="rounded-full bg-adipa-purple px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-adipa-cyan"
             >
               Ver cursos
             </button>
@@ -139,7 +139,7 @@ export function CartDrawer() {
                   {formatPrice(total)}
                 </span>
               </div>
-              <button className="w-full rounded-full bg-adipa-purple py-3 font-semibold text-white transition-colors hover:bg-adipa-purple-600">
+              <button className="w-full rounded-full bg-adipa-purple py-3 font-semibold text-white transition-colors hover:bg-adipa-cyan">
                 Ir al pago
               </button>
             </div>

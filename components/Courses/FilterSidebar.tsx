@@ -113,7 +113,7 @@ export function FilterSidebar({
             className={clsx(
               'w-full rounded-lg border border-adipa-gray-200 bg-adipa-gray-50 py-2 pl-8 pr-3 text-sm',
               'text-adipa-dark placeholder:text-adipa-gray-400',
-              'transition-all focus:border-adipa-purple focus:bg-white focus:outline-none focus:ring-2 focus:ring-adipa-purple/20',
+              'transition-all focus:border-adipa-cyan focus:bg-white focus:outline-none focus:ring-2 focus:ring-adipa-cyan/20',
               'dark:border-adipa-gray-700 dark:bg-adipa-gray-800 dark:text-black dark:focus:bg-adipa-gray-800',
             )}
           />
@@ -140,9 +140,9 @@ export function FilterSidebar({
                   aria-checked={isActive}
                   onClick={() => onChange({ category: cat.id })}
                   className={clsx(
-                    'flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
+                    'flex w-full items-center justify-between rounded-[7px] px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
-                      ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
+                      ? 'bg-adipa-cyan/10 font-semibold text-adipa-cyan'
                       : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-white dark:hover:bg-adipa-gray-700/50',
                   )}
                 >
@@ -151,7 +151,7 @@ export function FilterSidebar({
                     className={clsx(
                       'ml-2 flex-shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-bold',
                       isActive
-                        ? 'bg-adipa-purple text-white'
+                        ? 'bg-adipa-cyan text-white'
                         : 'bg-adipa-gray-200 text-adipa-gray-500 dark:bg-adipa-gray-700 dark:text-white',
                     )}
                   >
@@ -182,7 +182,7 @@ export function FilterSidebar({
                     type="checkbox"
                     checked={checked}
                     onChange={() => toggleModality(value)}
-                    className="h-4 w-4 flex-shrink-0 rounded border-adipa-gray-300 accent-adipa-purple"
+                    className="h-4 w-4 flex-shrink-0"
                   />
                   <span className="flex flex-1 items-center gap-2 text-sm text-adipa-gray-700 dark:text-white">
                     {label}
@@ -213,9 +213,9 @@ export function FilterSidebar({
                   aria-checked={isActive}
                   onClick={() => onChange({ maxPrice: value })}
                   className={clsx(
-                    'flex w-full items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition-colors cursor-pointer',
+                    'flex w-full items-center gap-2.5 rounded-[7px] px-3 py-2 text-sm transition-colors cursor-pointer',
                     isActive
-                      ? 'bg-adipa-purple/10 font-semibold text-adipa-purple'
+                      ? 'bg-adipa-cyan/10 font-semibold text-adipa-cyan'
                       : 'text-adipa-gray-700 hover:bg-adipa-gray-100 dark:text-white dark:hover:bg-adipa-gray-700/50',
                   )}
                 >
@@ -223,7 +223,7 @@ export function FilterSidebar({
                     className={clsx(
                       'h-3.5 w-3.5 flex-shrink-0 rounded-full border-2 transition-colors',
                       isActive
-                        ? 'border-adipa-purple bg-adipa-purple'
+                        ? 'border-adipa-cyan bg-adipa-cyan'
                         : 'border-adipa-gray-400',
                     )}
                   />
@@ -256,7 +256,7 @@ export function FilterSidebar({
                     type="checkbox"
                     checked={filters[key]}
                     onChange={(e) => onChange({ [key]: e.target.checked })}
-                    className="h-4 w-4 flex-shrink-0 rounded border-adipa-gray-300 accent-adipa-purple"
+                    className="h-4 w-4 flex-shrink-0"
                   />
                   <span className="flex items-center gap-2 text-sm text-adipa-gray-700 dark:text-white">
                     <span aria-hidden="true">{icon}</span>
@@ -274,7 +274,7 @@ export function FilterSidebar({
         <button
           type="button"
           onClick={() => onChange({ ...DEFAULT_FILTERS })}
-          className="flex w-full items-center justify-center gap-2 rounded-lg border border-adipa-red/40 py-2 text-sm font-semibold text-adipa-red transition-colors hover:bg-adipa-red/5 cursor-pointer"
+          className="flex w-full items-center justify-center gap-2 rounded-[7px] border border-adipa-red/40 py-2 text-sm font-semibold text-adipa-red transition-colors hover:bg-adipa-red/5 cursor-pointer"
         >
           <X size={13} aria-hidden="true" />
           Limpiar filtros ({activeCount})
@@ -294,11 +294,11 @@ export function FilterSidebar({
           {/* Header */}
           <div className="mb-5 flex items-center justify-between">
             <p className="flex items-center gap-2 font-bold text-adipa-dark dark:text-white">
-              <SlidersHorizontal size={15} className="text-adipa-purple" aria-hidden="true" />
+              <SlidersHorizontal size={15} className="text-adipa-cyan" aria-hidden="true" />
               Filtros
             </p>
             {hasActive && (
-              <span className="rounded-full bg-adipa-purple px-2 py-0.5 text-xs font-bold text-white">
+              <span className="rounded-full bg-adipa-cyan px-2 py-0.5 text-xs font-bold text-white">
                 {activeCount}
               </span>
             )}
@@ -329,10 +329,10 @@ export function FilterSidebar({
             {/* Header */}
             <div className="mb-5 flex items-center justify-between">
               <p className="flex items-center gap-2 font-bold text-adipa-dark dark:text-white">
-                <SlidersHorizontal size={15} className="text-adipa-purple" aria-hidden="true" />
+                <SlidersHorizontal size={15} className="text-adipa-cyan" aria-hidden="true" />
                 Filtros
                 {hasActive && (
-                  <span className="rounded-full bg-adipa-purple px-2 py-0.5 text-xs font-bold text-white">
+                  <span className="rounded-full bg-adipa-cyan px-2 py-0.5 text-xs font-bold text-white">
                     {activeCount}
                   </span>
                 )}
@@ -351,7 +351,7 @@ export function FilterSidebar({
             {/* Apply button */}
             <button
               onClick={onClose}
-              className="mt-6 w-full rounded-full bg-adipa-purple py-3 font-semibold text-white transition-colors hover:bg-adipa-purple-600"
+              className="mt-6 w-full rounded-full bg-adipa-purple py-3 font-semibold text-white transition-colors hover:bg-adipa-cyan"
             >
               Ver {resultCount} {resultCount === 1 ? 'curso' : 'cursos'}
             </button>
